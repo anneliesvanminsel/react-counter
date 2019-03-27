@@ -55,14 +55,11 @@ const Counter = () => {
 
         <div className="block">
             <form className="form">
-                <fieldset>
                     <select
                         className="select"
                         onChange={handleOnChangeInput} >
                         {optionMap}
                     </select>
-
-                </fieldset>
             </form>
             <div className="block__actions">
                 <button className="button button--decrement" onClick={handleDecrement}>
