@@ -1,19 +1,19 @@
-import React, {useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import {createStore} from 'redux';
 import {useCounter} from 'hooks/useCounter';
 import {useLocalStorage} from 'hooks/useLocalStorage';
 import {ReactComponent as Increment} from 'icons/increment.svg';
 import {ReactComponent as Decrement} from 'icons/decrement.svg';
 
+const incrementValues = [1, 5, 10];
+
 const Counter = () => {
-    const initialCounter = 10;
-    const [localStorage, setLocalStorage] = useLocalStorage('counter', initialCounter);
+    const [incrementor, setIncrementor] = useState(10);
+    const [localStorage, setLocalStorage] = useLocalStorage('counter', counter);
     const {counter, increment, decrement} = useCounter(localStorage);
 
-    let initialValue = 10;
-
     const handleDecrement = () => {
-        if (!(counter - initialValue < 0)) {
+        if (!(counter - incrementor < 0)) {
             store.dispatch({type: "DECREMENT"})
         }
     };
@@ -24,45 +24,55 @@ const Counter = () => {
 
     };
 
-    const count = (ctr = counter, action) => {
+    const count = (state = counter, action) => {
         switch (action.type) {
             case "INCREMENT":
-                increment(initialValue);
-                return ctr + initialValue;
+                increment(incrementor);
+                return state + incrementor;
             case "DECREMENT":
-                decrement(initialValue);
-                return ctr - initialValue;
+                decrement(incrementor);
+                return state - incrementor;
             default:
-                return counter;
+                return state;
         }
     };
 
-    const handleOnChangeInput = (e) => {
-        console.log(e.target)
+    const handleOnChangeInput = (event) => {
+        const value = JSON.parse(event.target.value);
+        setIncrementor(value);
     };
+
+    const optionMap = incrementValues.map( option => {
+        const selected = (incrementor === option.value) ? ' true' : 'false';
+        return <option key={option} value={option} selected={selected}> {option} </option>
+    });
 
     useEffect(() => setLocalStorage(counter), [counter]);
     let store = createStore(count);
-    store.subscribe(() => console.log(store.getState()))
+    store.subscribe(() => console.log(store.getState()));
 
     return (
+
         <div className="block">
-            <form>
+            <form className="form">
                 <fieldset>
-                    <select className="select" onChange={handleOnChangeInput}>
-                        <option>1</option>
-                        <option>5</option>
-                        <option>10</option>
+                    <select
+                        className="select"
+                        onChange={handleOnChangeInput} >
+                        {optionMap}
                     </select>
+
                 </fieldset>
             </form>
-            <button className="button button--decrement" onClick={handleDecrement}>
-                <Decrement/>
-            </button>
-            <div className="block__text"> {counter} </div>
-            <button className="button button--increment" onClick={handleIncrement}>
-                <Increment/>
-            </button>
+            <div className="block__actions">
+                <button className="button button--decrement" onClick={handleDecrement}>
+                    <Decrement/>
+                </button>
+                <div className="block__text"> {counter} </div>
+                <button className="button button--increment" onClick={handleIncrement}>
+                    <Increment/>
+                </button>
+            </div>
         </div>
     );
 };
