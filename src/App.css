@@ -1,8 +1,5 @@
-.App {
+.page {
   text-align: center;
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -13,17 +10,18 @@
   color: white;
 }
 
-.counter--wrapper {
+.block {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.counter--count {
+.block__text{
   margin: 100px;
 }
-button {
+
+.button {
   background: transparent;
   border: none;
 }

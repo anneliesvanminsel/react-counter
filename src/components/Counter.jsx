@@ -5,17 +5,27 @@ import { ReactComponent as Increment } from 'icons/increment.svg';
 import { ReactComponent as Decrement } from 'icons/decrement.svg';
 
 const Counter = () => {
+    const initialCounter = 10;
+    const [localStorage, setLocalStorage] = useLocalStorage('counter', initialCounter);
+    const {counter, increment, decrement} = useCounter(localStorage);
 
-    const {counter, increment, decrement} = useCounter(10);
-    useLocalStorage(counter);
+    const handleDecrement = () => {
+        decrement();
+        setLocalStorage(counter - 1);
+    };
+
+    const handleIncrement = () => {
+        increment();
+        setLocalStorage(counter + 1);
+    };
 
     return (
-        <div className="counter--wrapper">
-            <button onClick={decrement}>
+        <div className="block">
+            <button className="button button--decrement" onClick={handleDecrement}>
                 <Decrement />
             </button>
-            <div className="counter--count"> {counter} </div>
-            <button onClick={increment}>
+            <div className="block__text"> {counter} </div>
+            <button className="button button--increment" onClick={handleIncrement}>
                 <Increment />
             </button>
         </div>
