@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { useLocalStorage } from './useLocalStorage';
 
 function useCounter(value = 10) {
     const [counter, setCounter] = useState(value);
