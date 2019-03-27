@@ -43,7 +43,7 @@ const Counter = () => {
     };
 
     const optionMap = incrementValues.map( option => {
-        const selected = (incrementor === option) ? 'true' : '';
+        const selected = (incrementor === option) ? true : '';
         return <option key={option} value={option} selected={selected}> {option} </option>
     });
 
