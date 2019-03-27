@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/wieni-counter/precache-manifest.c11622fb5cd407a79fe927191fcf176a.js"
+  "/wieni-counter/precache-manifest.cc0725fc93465eb87a42d09b8cb9ad80.js"
 );
 
 workbox.clientsClaim();
