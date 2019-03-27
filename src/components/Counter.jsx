@@ -8,7 +8,7 @@ import {ReactComponent as Decrement} from 'icons/decrement.svg';
 const incrementValues = [1, 5, 10];
 
 const Counter = () => {
-    const [incrementor, setIncrementor] = useState(10);
+    const [incrementor, setIncrementor] = useState(5);
     const [localStorage, setLocalStorage] = useLocalStorage('counter', counter);
     const {counter, increment, decrement} = useCounter(localStorage);
 
@@ -43,7 +43,7 @@ const Counter = () => {
     };
 
     const optionMap = incrementValues.map( option => {
-        const selected = (incrementor === option.value) ? ' true' : 'false';
+        const selected = (incrementor === option) ? 'true' : '';
         return <option key={option} value={option} selected={selected}> {option} </option>
     });
 
