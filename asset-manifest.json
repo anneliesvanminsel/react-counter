@@ -1,15 +1,15 @@
 {
-  "main.css": "/wieni-counter/static/css/main.2aefd482.chunk.css",
-  "main.js": "/wieni-counter/static/js/main.dbb5e0cc.chunk.js",
-  "main.js.map": "/wieni-counter/static/js/main.dbb5e0cc.chunk.js.map",
+  "main.css": "/wieni-counter/static/css/main.48d1ebad.chunk.css",
+  "main.js": "/wieni-counter/static/js/main.1a7dc42c.chunk.js",
+  "main.js.map": "/wieni-counter/static/js/main.1a7dc42c.chunk.js.map",
   "runtime~main.js": "/wieni-counter/static/js/runtime~main.ed1bd51f.js",
   "runtime~main.js.map": "/wieni-counter/static/js/runtime~main.ed1bd51f.js.map",
   "static/js/2.0ebc2d5a.chunk.js": "/wieni-counter/static/js/2.0ebc2d5a.chunk.js",
   "static/js/2.0ebc2d5a.chunk.js.map": "/wieni-counter/static/js/2.0ebc2d5a.chunk.js.map",
   "index.html": "/wieni-counter/index.html",
-  "precache-manifest.cc0725fc93465eb87a42d09b8cb9ad80.js": "/wieni-counter/precache-manifest.cc0725fc93465eb87a42d09b8cb9ad80.js",
+  "precache-manifest.c2c705c42227152631a63a29c7b166d9.js": "/wieni-counter/precache-manifest.c2c705c42227152631a63a29c7b166d9.js",
   "service-worker.js": "/wieni-counter/service-worker.js",
-  "static/css/main.2aefd482.chunk.css.map": "/wieni-counter/static/css/main.2aefd482.chunk.css.map",
+  "static/css/main.48d1ebad.chunk.css.map": "/wieni-counter/static/css/main.48d1ebad.chunk.css.map",
   "static/media/decrement.0bf66351.svg": "/wieni-counter/static/media/decrement.0bf66351.svg",
   "static/media/increment.96525926.svg": "/wieni-counter/static/media/increment.96525926.svg"
 }

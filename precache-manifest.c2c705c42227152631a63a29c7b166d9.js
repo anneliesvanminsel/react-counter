@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/wieni-counter/static/js/runtime~main.ed1bd51f.js"
   },
   {
-    "revision": "e1efa8a725e0f4778ed2",
-    "url": "/wieni-counter/static/js/main.dbb5e0cc.chunk.js"
+    "revision": "6240a90897ce3783f8f7",
+    "url": "/wieni-counter/static/js/main.1a7dc42c.chunk.js"
   },
   {
     "revision": "72fb221b674b9ba643ef",
     "url": "/wieni-counter/static/js/2.0ebc2d5a.chunk.js"
   },
   {
-    "revision": "e1efa8a725e0f4778ed2",
-    "url": "/wieni-counter/static/css/main.2aefd482.chunk.css"
+    "revision": "6240a90897ce3783f8f7",
+    "url": "/wieni-counter/static/css/main.48d1ebad.chunk.css"
   },
   {
-    "revision": "42e2ba415efb5d78a229f4ae13a54f68",
+    "revision": "a88245953dd8778ba6d429d9d2fb3a7b",
     "url": "/wieni-counter/index.html"
   }
 ];
