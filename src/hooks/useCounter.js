@@ -4,14 +4,12 @@ import { useLocalStorage } from './useLocalStorage';
 function useCounter(value = 10) {
     const [counter, setCounter] = useState(value);
 
-    const increment = () => {
-        setCounter(counter + 1);
+    const increment = (value) => {
+        setCounter(counter + value);
     };
 
-    const decrement = () => {
-        if(!(counter - 1 < 0)) {
-            setCounter(counter - 1);
-        }
+    const decrement = (value) => {
+        setCounter(counter - value);
     };
 
     return {counter, decrement, increment};
